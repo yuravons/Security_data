@@ -1,0 +1,37 @@
+﻿<Window x:Class="RSA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSA"
+        mc:Ignorable="d"
+        Title="RSA" Height="159" Width="486">
+    <Window.Resources>
+        <Style x:Key="CommentStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="Blue" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontStyle" Value="Italic" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="TextBoxOriginalFilePath" IsReadOnly="True" HorizontalAlignment="Left" Height="24" Margin="15,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="446" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.002"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Name="button1"  Content="Вибір файлу" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="349,1,0,0" Height="25" Click="button1_Click"/>
+        <Button x:Name="button2" IsEnabled="True" Content="Зашифрувати" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,61,0,0" Height="22" Click="button2_Click"/>
+        <Button x:Name="button3" IsEnabled="True" Content="Розшифувати" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,88,0,0" Height="22" Click="button3_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="49" Margin="148,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="311"/>
+        <Label Content="Оберіть файл, який бажаєте зашифрувати/розшифрувати: " HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="334"/>
+
+    </Grid>
+</Window>
